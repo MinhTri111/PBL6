@@ -34,7 +34,7 @@ def predict():
             # print(type(data))
             pr.covertBase64ToImg(data)
             img = pr.readAndProcessImg(PATH)
-            print(np.asarray(img))
+            # print(np.asarray(img))
             result = model.predict(img.reshape(1,48,48,1))
             arr_predict = pr.sortPredict(result)
 
